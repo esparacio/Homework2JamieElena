@@ -1,0 +1,66 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 14, 2015, 12:20:27 PM
+    Author     : Elena
+*/
+
+body{
+    margin: 0 auto;
+    font-family: Arial, Verdana, sans-serif;
+    width: 80%;
+    border: 2px solid blue;
+}
+
+footer{
+    border-top: 2px solid blue;
+    text-indent: 3em;
+}
+
+form{
+    text-align: right;
+    padding-right:30%;
+}
+
+h1{
+    font-size:1.5em;
+    text-indent:2em;
+    padding-top: 1em;
+    color:blue;
+}
+
+input{
+    width:15em;
+}
+.butt{
+    margin-right:5.5em;
+    width:10em;
+}
+.turtle{
+    text-align:right;
+    padding-left:1em;
+}
+
+
+
+
+@media screen and (max-width: 400px){
+    h1{
+        text-indent:0em;
+        padding-left:1.3em;
+    }
+    form{
+        padding-left:2em;
+        text-align: left;
+    }
+    footer{
+        text-indent:0em;
+        padding-left:1.3em;
+    }
+}
+
+
+
