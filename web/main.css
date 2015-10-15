@@ -1,47 +1,44 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
     Created on : Oct 14, 2015, 12:20:27 PM
-    Author     : Elena
+    Author     : (c) Elena Sparacio and Jamie Utt
 */
 
-body{
-    margin: 0 auto;
-    font-family: Arial, Verdana, sans-serif;
-    width: 80%;
-    border: 2px solid blue;
+body {
+  border: 2px solid blue;
+  font-family: Arial, Verdana, sans-serif;
+  margin: 0 auto;
+  width: 80%;
 }
 
-footer{
-    border-top: 2px solid blue;
-    text-indent: 3em;
+footer {
+  border-top: 2px solid blue;
+  text-indent: 3em;
 }
 
-form{
-    text-align: right;
-    padding-right:30%;
+form {
+  padding-right:30%;
+  text-align: right;
 }
 
-h1{
-    font-size:1.5em;
-    text-indent:2em;
-    padding-top: 1em;
-    color:blue;
+h1 {
+  color:blue;
+  font-size:1.5em;
+  padding-top: 1em;
+  text-indent:2em;
 }
 
-input{
-    width:15em;
+input {
+  width:15em;
 }
-.butt{
-    margin-right:5.5em;
-    width:10em;
+
+.butt {
+  margin-right:5.5em;
+  width:10em;
 }
-.turtle{
-    text-align:right;
+
+.turtle {
     padding-left:1em;
+    text-align:right;
 }
 
 
