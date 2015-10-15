@@ -1,6 +1,6 @@
 /* 
-    Created on : Oct 14, 2015, 12:20:27 PM
-    Author     : (c) Elena Sparacio and Jamie Utt
+  Created on : Oct 14, 2015, 12:20:27 PM
+  Author     : (c) Elena Sparacio and Jamie Utt
 */
 
 body {
@@ -36,27 +36,29 @@ input {
   width:10em;
 }
 
-.turtle {
-    padding-left:1em;
-    text-align:right;
+.box {
+  padding-left:1em;
+  text-align:right;
 }
 
 
 
 
-@media screen and (max-width: 400px){
-    h1{
-        text-indent:0em;
-        padding-left:1.3em;
-    }
-    form{
-        padding-left:2em;
-        text-align: left;
-    }
-    footer{
-        text-indent:0em;
-        padding-left:1.3em;
-    }
+@media screen and (max-width: 400px) {
+  h1 {
+    text-indent:0em;
+    padding-left:1.3em;
+  }
+  
+  form {
+    padding-left:2em;
+    text-align: left;
+  }
+  
+  footer {
+    text-indent:0em;
+    padding-left:1.3em;
+  }
 }
 
 
