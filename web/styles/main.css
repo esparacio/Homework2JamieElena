@@ -31,15 +31,15 @@ input {
   width:15em;
 }
 
+tr{
+    text-align:right;
+}
+
 .butt {
   margin-right:5.5em;
   width:10em;
 }
 
-tr{
-    text-align:right;
-   
-}
 
 .gouda{
     text-align:left;
@@ -47,6 +47,10 @@ tr{
 }
 table{
     padding-left:10em;
+}
+
+p{
+    text-indent: 3em;
 }
 
 

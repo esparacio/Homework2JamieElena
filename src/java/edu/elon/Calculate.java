@@ -36,34 +36,33 @@ public class Calculate extends HttpServlet {
             url = "/index.jsp";    // the "join" page
         } 
         else if (action.equals("add")) {
-            // get parameters from the request
-            double investAmount = Double.parseDouble(request.getParameter("investAmount"));
-            double yearlyRate = Double.parseDouble(request.getParameter("yearlyRate"));
-            int numYears = Integer.parseInt(request.getParameter("numYears"));
-            double futureValue = investAmount;
+          
+            try{
+             double investAmount = Double.parseDouble(request.getParameter("investAmount"));
+             double yearlyRate = Double.parseDouble(request.getParameter("yearlyRate"));
+             int numYears = Integer.parseInt(request.getParameter("numYears"));
+             double futureValue = investAmount;
             for(int i=0;i<numYears; i++){
                 futureValue = investAmount+(investAmount)*((yearlyRate)/100);
                 investAmount =futureValue;
         }
-            investAmount=Double.parseDouble(request.getParameter("investAmount"));
-           
-            // store data in User object
-            User user = new User(investAmount, yearlyRate, numYears, futureValue);
-
-            // validate the parameters
-            String message;
-            if (investAmount == 0 || yearlyRate == 0 || numYears == 0)
-                 {
-                message = "Please fill out all three text boxes.";
-                url = "/index.jsp";
-            } 
-            else {
-                message = "";
+                investAmount=Double.parseDouble(request.getParameter("investAmount"));
+                User user = new User(investAmount, yearlyRate, numYears, futureValue);
+                String message = "";
                 url = "/thanks.jsp";
                 UserDB.insert(user);
+                request.setAttribute("user", user);
+               request.setAttribute("message", message);
+
+
             }
-            request.setAttribute("user", user);
+            catch(NumberFormatException nfe){
+                String message = "Please fill out all three text boxes.";
+                url = "/index.jsp";
             request.setAttribute("message", message);
+            }
+   
+       
         }
         getServletContext()
                 .getRequestDispatcher(url)
