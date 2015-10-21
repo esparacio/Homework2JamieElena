@@ -37,14 +37,16 @@ public class Calculate extends HttpServlet {
         } 
         else if (action.equals("add")) {
             // get parameters from the request
-            int investAmount = Integer.parseInt(request.getParameter("investAmount"));
+            double investAmount = Double.parseDouble(request.getParameter("investAmount"));
             double yearlyRate = Double.parseDouble(request.getParameter("yearlyRate"));
             int numYears = Integer.parseInt(request.getParameter("numYears"));
-            double futureValue = (investAmount)*(numYears)*(yearlyRate); 
+            double futureValue = investAmount;
+            for(int i=0;i<numYears; i++){
+                futureValue = investAmount+(investAmount)*((yearlyRate)/100);
+                investAmount =futureValue;
+        }
+            investAmount=Double.parseDouble(request.getParameter("investAmount"));
            
-            
-            System.out.println("hi");
-
             // store data in User object
             User user = new User(investAmount, yearlyRate, numYears, futureValue);
 

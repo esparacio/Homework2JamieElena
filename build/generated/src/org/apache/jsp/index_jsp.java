@@ -65,11 +65,11 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <h1>Future Value Calculator</h1>\n");
       out.write("    <section>\n");
       out.write("      <form action=\"calculate\" method=\"post\">\n");
-      out.write("        <input type=\"hidden\" name=\"action\" value=\"add\">        \n");
+      out.write("        <input type=\"hidden\" name=\"action\" value=\"add\"> \n");
       out.write("        <p><label>Investment Amount </label><input name=\"investAmount\" type=\"text\" value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${user.investAmount}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\" /></p>\n");
-      out.write("        <p><label>Yearly Interest Rate </label><input name=\"yearlyRate\" type=\"tex\" value=\"");
+      out.write("        <p><label>Yearly Interest Rate </label><input name=\"yearlyRate\" type=\"text\" value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${user.yearlyRate}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\" /></p>\n");
       out.write("        <p><label>Number of Years </label><input name=\"numYears\" type=\"number\" value=\"");

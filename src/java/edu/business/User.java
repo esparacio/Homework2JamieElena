@@ -14,7 +14,7 @@ import java.text.NumberFormat;
  */
 public class User implements Serializable {
 
-    private int investAmount;
+    private double investAmount;
     private double yearlyRate;
     private int numYears;
     private double futureValue;
@@ -26,18 +26,18 @@ public class User implements Serializable {
         futureValue= 0;
     }
 
-    public User(int investAmount, double yearlyRate, int numYears, double futureValue) {
+    public User(double investAmount, double yearlyRate, int numYears, double futureValue) {
         this.investAmount = investAmount;
         this.yearlyRate = yearlyRate;
         this.numYears = numYears;
         this.futureValue = futureValue;
     }
 
-    public int getInvestAmount() {
+    public double getInvestAmount() {
         return investAmount;
     }
 
-    public void setInvestAmount(int investAmount) {
+    public void setInvestAmount(double investAmount) {
         this.investAmount = investAmount;
     }
 
