@@ -7,22 +7,29 @@
 <%@page contentType="text/html" pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Murach's Java Servlets and JSP</title>
-    <link rel="stylesheet" href="main.css" type="text/css"/>
-  </head>
+   <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+ <c:import url="/includes/header.html"/>
   <body>
     <h1>Future Value Calculator</h1>
-    <label class="box">Investment Amount:</label>
-    <span class="value">${user.investAmount}</span><br>
-    <label class="box">Yearly Interest Rate:</label>
-    <span class="value">${user.yearlyRate}</span><br>
-    <label class="box">Number of Years:</label>
-    <span class="value">${user.numYears}</span><br>
-    <label class="box">Future Value:</label>
-    <footer>
-      <p>&copy; 2015, Elena Sparacio and Jamie Utt</p>
-    </footer>
+   <jsp:useBean id="user" scope="request" class="edu.business.User"/>
+    <table>
+        <tr>
+            <td><label class="box">Investment Amount:</label> </td>
+            <td class="gouda"> <span class="value"><jsp:getProperty name="user" property="IACurrency"/></span><br></td>
+    </tr>
+    <tr>
+        <td><label class="box">Yearly Interest Rate:</label></td>
+        <td class="gouda"><span class="value"><jsp:getProperty name="user" property="yearlyRate"/></span><br></td>
+    </tr>
+    <tr>
+        <td><label class="box">Number of Years:</label></td>
+        <td class="gouda"><span class="value"><jsp:getProperty name="user" property="numYears"/></span><br></td>
+    </tr>
+    <tr>
+        <td><label class="box">Future Value:</label></td>
+        <td class="gouda"><span class="value"><jsp:getProperty name="user" property="FVCurrency"/></span></td>
+    </tr>
+    </table>
+     <c:import url="/includes/footer.html"/>
   </body>
 </html>

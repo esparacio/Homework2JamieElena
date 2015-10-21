@@ -37,11 +37,11 @@ public class Calculate extends HttpServlet {
         } 
         else if (action.equals("add")) {
             // get parameters from the request
-            String investAmount = request.getParameter("investAmount");
-            String yearlyRate = request.getParameter("yearlyRate");
-            String numYears = request.getParameter("numYears");
-            int future = 2; 
-            int futureValue = future;
+            int investAmount = Integer.parseInt(request.getParameter("investAmount"));
+            double yearlyRate = Double.parseDouble(request.getParameter("yearlyRate"));
+            int numYears = Integer.parseInt(request.getParameter("numYears"));
+            double futureValue = (investAmount)*(numYears)*(yearlyRate); 
+           
             
             System.out.println("hi");
 
@@ -50,8 +50,8 @@ public class Calculate extends HttpServlet {
 
             // validate the parameters
             String message;
-            if (investAmount == null || yearlyRate == null || numYears == null ||
-                investAmount.isEmpty() || yearlyRate.isEmpty() || numYears.isEmpty()) {
+            if (investAmount == 0 || yearlyRate == 0 || numYears == 0)
+                 {
                 message = "Please fill out all three text boxes.";
                 url = "/index.jsp";
             } 

@@ -6,6 +6,7 @@
 package edu.business;
 
 import java.io.Serializable;
+import java.text.NumberFormat;
 
 /**
  *
@@ -13,54 +14,65 @@ import java.io.Serializable;
  */
 public class User implements Serializable {
 
-    private String investAmount;
-    private String yearlyRate;
-    private String numYears;
-    private int futureValue;
+    private int investAmount;
+    private double yearlyRate;
+    private int numYears;
+    private double futureValue;
 
     public User() {
-        investAmount = "";
-        yearlyRate = "";
-        numYears = "";
+        investAmount = 0;
+        yearlyRate = 0;
+        numYears = 0;
         futureValue= 0;
     }
 
-    public User(String investAmount, String yearlyRate, String numYears, int futureValue) {
+    public User(int investAmount, double yearlyRate, int numYears, double futureValue) {
         this.investAmount = investAmount;
         this.yearlyRate = yearlyRate;
         this.numYears = numYears;
         this.futureValue = futureValue;
     }
 
-    public String getInvestAmount() {
+    public int getInvestAmount() {
         return investAmount;
     }
 
-    public void setInvestAmount(String investAmount) {
+    public void setInvestAmount(int investAmount) {
         this.investAmount = investAmount;
     }
 
-    public String getYearlyRate() {
+    public double getYearlyRate() {
         return yearlyRate;
     }
 
-    public void setYearlyRate(String yearlyRate) {
+    public void setYearlyRate(double yearlyRate) {
         this.yearlyRate = yearlyRate;
     }
 
-    public String getNumYears() {
+    public int getNumYears() {
         return numYears;
     }
 
-    public void setNumYears(String numYears) {
+    public void setNumYears(int numYears) {
         this.numYears = numYears;
     }
     
-    public void setFutureValue(int futureValue){
+    public void setFutureValue(double futureValue){
         this.futureValue = futureValue;
     }
     
-     public int getFutureValue(int futureValue){
+     public double getFutureValue(){
         return futureValue;
     }
+     
+     public String getIACurrency(){
+         NumberFormat currency = NumberFormat.getCurrencyInstance();
+         return currency.format(investAmount);
+     }
+     
+      
+       public String getFVCurrency(){
+         NumberFormat currency = NumberFormat.getCurrencyInstance();
+         return currency.format(futureValue);
+     }
 }
